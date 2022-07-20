@@ -1,0 +1,9 @@
+*.log
+.DS_Store
+node_modules
+index.js
+mini.js
+index.d.ts
+mini.d.ts
+types-*.d.ts
+

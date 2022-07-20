@@ -1,0 +1,54 @@
+{
+  "name": "@screaming/table",
+  "version": "0.1.0",
+  "description": "Rankable, sortable, and filterable tables for Screaming Frog projects 🐸",
+  "author": "Eben Tuff",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf index.* mini.* types-*.d.ts",
+    "build": "tsup",
+    "watch": "yarn build --watch src",
+    "prepublishOnly": "yarn build"
+  },
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "mini.js",
+    "index.d.ts",
+    "mini.d.ts",
+    "types-*.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./mini": {
+      "import": "./mini.js",
+      "types": "./mini.d.ts"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "tsup": "^6.1.3",
+    "typescript": "^4.7.4",
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
+}
